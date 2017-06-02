@@ -1,0 +1,242 @@
+@font-face {
+	font-family: 'brown-l';
+	src: url('../fonts/brown-light.woff');
+	font-size: 1em;
+}
+
+@font-face {
+	font-family: 'brown-b';
+	src: url('../fonts/brown-bold.woff');
+	font-size: 1em;
+}
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #32243E;
+}
+
+header {
+	background: #32243E;
+	color: #AFAAB4;
+	height: 80px;
+}
+
+/* --- padroes reutilizaveis ---*/
+.text-verm { /* todos os textos vermelhos */
+	color: #F05F53;
+}
+
+.botao {
+	display: inline-block;
+	background: none;
+	border: 1px solid #F05F53;
+	padding: 5px 10px;
+	font-size: 16px;
+	font-family: brown-l;
+	text-transform: uppercase;
+	letter-spacing: .15em;
+
+	position: relative;
+	transition-property: color;
+	transition: all .3s ease;
+}
+
+a.botao {
+	text-decoration: none;
+}
+
+.botao:hover {
+	color: #32243e;
+	background: #F05F53;
+}
+
+
+/* --- navbar --- */
+/* nome */
+.nome-site a, .nome-site p {
+	float: left;
+	line-height: 80px;
+	text-decoration: none;
+	margin: 0 5px;
+}
+
+.nome-site a {
+	font-size: 18px;
+	font-family: brown-b;
+}
+
+.nome-site a:hover {
+	color: #d85247;
+}
+
+.nome-site p {
+	font-family: brown-l;
+	font-size: 14px;
+	line-height: 85px;
+}
+
+/* img logo */
+.logo img{
+	height: 80px;
+	display: block;
+	margin: 0 auto;
+	padding: 5px;
+	transition: all 300ms ease;
+	cursor: pointer;
+}
+
+.logo img:hover {
+	transform: scale(.9);
+}
+
+/* botao topo */
+.btn-topo {
+	margin-top: 24px;
+}
+
+/* conteudo pagina ---*/
+section {
+	margin-top: 30px;
+}
+
+.block-form {
+	max-width: 650px;
+	display: block;
+	color: #fff;
+	border: 1px solid #583F6D;
+	margin: 25px auto;
+	padding: 25px;
+}
+
+.block-form h2 {
+	position: absolute;
+	top: -25px;
+	left: 38%;
+	background: #32243E;
+	padding: 10px;
+}
+
+.block-linha {
+	margin: 15px 0 20px 0;
+}
+
+.label-tit {
+	font-family: brown-b, helvetica,sans-serif;
+	color: #FFF;
+	font-size: 18px;
+}
+
+.input-est {
+	background: #392946;
+	border: 1px solid #583F6D;
+	outline: none;
+	padding: 10px;
+	height: 45px;
+	width: 100%;
+	font-family: brown-l,helvetica,sans-serif;
+	font-size: 14px;
+}
+
+.input-est:focus {
+	border-color: #795893;
+}
+
+/* input de checkbox*/
+.item {
+	color: #fff;
+	font-family: brown-l,helvetica,sans-serif;
+	font-size: 14px;
+	display: block;
+	position: relative;
+}
+
+.item:hover {
+	color: #ff5f54;
+}
+
+/*esconde o checkbox original,para entrar o meu estilizado*/
+input[type="checkbox"], input[type="radio"] {
+	visibility: hidden;
+	cursor: pointer;
+}
+
+/*configuraçoes da label em si*/
+.checkbox-custom-label {
+	vertical-align: middle;
+	display: inline-block;
+	margin: 10px 0 10px -10px;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+/*novo estilo do checkbox, apagou o original e usara o before da label*/
+.checkbox-custom-label::before {
+	content: ' ';
+	background: #392946;
+	border: 1px solid #583F6D;
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	padding: 2px;
+	margin-right: 10px;
+	text-align: center;
+	line-height: 15px;
+	position: relative;
+	top: -1px;
+}
+
+.custom-radio-label::before{
+	content: ' ';
+	border-radius: 50%;
+}
+
+/*faz a marca de check qndo clicar no checkbox*/
+.checkbox-custom:checked+ .checkbox-custom-label:before{
+	content: "\2713 ";
+	color: #f05f53;
+}
+
+.radio-custom:checked+ .checkbox-custom-label:before{
+	content: ' \25CF';
+	color: #f05f53;
+	font-size: 21px;
+	line-height: 12px;
+	padding-left: 2px;
+}
+
+/*--- Parte da text area ---*/
+.resum{
+	font-size: 14px;
+	font-family: brown-l,helvetica,sans-serif;
+	color: #AFAAB4;
+}
+
+.textarea-est {
+	height: 100px;
+}
+
+/*infos do email*/
+.info {
+	margin: 15px 2px;
+	font-family: brown-l,helvetica,sans-serif;
+	text-align: center;
+}
+
+.info a {
+	color: #F05F53;
+}
+
+.clearfix{
+	clear: both
+}
